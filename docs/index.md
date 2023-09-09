@@ -1,6 +1,6 @@
 ---
 home: true
-heroText: 印客学院
+heroText: etcetera
 tagline: 前端编码规范工程化
 actionText: 立刻进入 →
 actionLink: /coding/html.md
@@ -49,12 +49,3 @@ features:
 [encode-fe-lint](https://www.npmjs.com/package/encode-fe-lint) 收敛屏蔽了上述依赖和配置细节，提供简单的 `CLI` 和 `Node.js API`，让项目能够一键接入、一键扫描、一键修复、一键升级，并为项目配置 git commit 卡口，降低项目接入规范的成本。
 
 您可以使用[encode-fe-lint](https://www.npmjs.com/package/encode-fe-lint) 方便地为项目接入全部规范。
-
-</br>
-
-## :email: 联系
-
-- **印客学院官网**: <http://encodestudio.cn>
-- **GitHub**: <https://github.com/encode-studio-fe/fe-spec>
-
-</br>

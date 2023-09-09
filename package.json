@@ -1,7 +1,7 @@
 {
   "name": "etc-fe-spec",
   "private": true,
-  "description": "印客学院--前端编码规范工程化",
+  "description": "etcetera--前端编码规范工程化",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "husky install",

@@ -12,7 +12,7 @@ author:
 # encode-fe-markdownlint-config
 
 :::tip
-印客学院 文档 规范
+etcetera 文档 规范
 :::
 
 支持配套的 [markdownlint 可共享配置](https://www.npmjs.com/package/markdownlint#optionsconfig)。

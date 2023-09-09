@@ -2,7 +2,7 @@
   "name": "encode-fe-markdownlint-config",
   "version": "1.0.0",
   "main": "index.json",
-  "description": "印客学院 文档规范",
+  "description": "etcetera 文档规范",
   "keywords": [
     "encode",
     "markdown",

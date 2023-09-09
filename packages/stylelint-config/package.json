@@ -1,7 +1,7 @@
 {
   "name": "encode-fe-stylelint-config",
   "version": "1.0.0",
-  "description": "印客学院 CSS规范",
+  "description": "etcetera CSS规范",
   "main": "index.js",
   "keywords": [
     "encode",
