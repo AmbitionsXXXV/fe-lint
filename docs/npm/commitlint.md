@@ -1,5 +1,5 @@
 ---
-title: encode-fe-commitlint-config
+title: etc-fe-commitlint-config
 categories:
   - 工程规范
 tags:

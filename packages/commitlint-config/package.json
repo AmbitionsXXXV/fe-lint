@@ -1,10 +1,10 @@
 {
-  "name": "encode-fe-commitlint-config",
+  "name": "etc-fe-commitlint-config",
   "version": "1.0.0",
   "main": "index.js",
   "description": "etcetera Git规范",
   "keywords": [
-    "encode",
+    "etcetera",
     "commit",
     "lint"
   ],

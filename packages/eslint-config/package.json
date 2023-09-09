@@ -1,10 +1,10 @@
 {
-  "name": "encode-fe-eslint-config",
+  "name": "etc-fe-eslint-config",
   "version": "1.0.0",
   "main": "index.js",
   "description": "etcetera JavaScript TypeScript Node 规范",
   "keywords": [
-    "encode",
+    "etcetera",
     "javaScript",
     "typescript",
     "node",

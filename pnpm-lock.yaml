@@ -169,16 +169,16 @@ importers:
       ejs:
         specifier: ^3.1.5
         version: 3.1.9
-      encode-fe-commitlint-config:
+      etc-fe-commitlint-config:
         specifier: workspace:^
         version: link:../commitlint-config
-      encode-fe-eslint-config:
+      etc-fe-eslint-config:
         specifier: workspace:^
         version: link:../eslint-config
-      encode-fe-markdownlint-config:
+      etc-fe-markdownlint-config:
         specifier: workspace:^
         version: link:../markdownlint-config
-      encode-fe-stylelint-config:
+      etc-fe-stylelint-config:
         specifier: workspace:^
         version: link:../stylelint-config
       eslint:
@@ -15221,7 +15221,7 @@ packages:
     dependencies:
       decode-uri-component: 0.2.2
       object-assign: 4.1.1
-      strict-uri-encode: 1.1.0
+      strict-uri-etc: 1.1.0
     dev: true
 
   /querystring-es3@0.2.1:
@@ -16486,7 +16486,7 @@ packages:
     resolution: {integrity: sha512-AiisoFqQ0vbGcZgQPY1cdP2I76glaVA/RauYR4G4thNFgkTqr90yXTo4LYX60Jl+sIlPNHHdGSwo01AvbKUSVQ==}
     dev: true
 
-  /strict-uri-encode@1.1.0:
+  /strict-uri-etc@1.1.0:
     resolution: {integrity: sha512-R3f198pcvnB+5IpnBlRkphuE9n46WyVl8I39W/ZUTZLz4nqSP/oLYUrcnJrw462Ds8he4YKMov2efsTIw1BDGQ==}
     engines: {node: '>=0.10.0'}
     dev: true

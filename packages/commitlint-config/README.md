@@ -1,4 +1,4 @@
-# `encode-fe-commitlint-config`
+# `etc-fe-commitlint-config`
 
 > etcetera Git 规范
 
@@ -9,7 +9,7 @@
 使用时，需要安装 [@commitlint/cli](https://www.npmjs.com/package/@commitlint/cli)：
 
 ```bash
-npm install encode-fe-commitlint-config @commitlint/cli --save-dev
+npm install etc-fe-commitlint-config @commitlint/cli --save-dev
 ```
 
 ## 使用
@@ -18,7 +18,7 @@ npm install encode-fe-commitlint-config @commitlint/cli --save-dev
 
 ```javascript
 module.exports = {
-	extends: ['encode-fe-commitlint-config'],
+	extends: ['etc-fe-commitlint-config'],
 };
 ```
 

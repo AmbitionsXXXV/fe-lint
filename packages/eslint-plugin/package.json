@@ -1,7 +1,7 @@
 {
-  "name": "encode-fe-eslint-plugin",
+  "name": "etc-fe-eslint-plugin",
   "version": "1.0.0",
-  "description": "印客教育自定义eslint插件",
+  "description": "etcetera custom eslint plugin",
   "scripts": {
     "test": "jest",
     "prepublishOnly": "npm run test"
@@ -12,7 +12,7 @@
     "README.md"
   ],
   "keywords": [
-    "encode",
+    "etcetera",
     "eslint",
     "eslint-plugin"
   ],

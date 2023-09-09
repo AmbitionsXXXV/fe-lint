@@ -1,5 +1,5 @@
 ---
-title: encode-fe-eslint-plugin
+title: etc-fe-eslint-plugin
 categories:
   - 工程规范
 tags:
@@ -9,12 +9,12 @@ author:
   link: https://github.com/AmbitionsXXXV/fe-lint
 ---
 
-# encode-fe-eslint-plugin
+# etc-fe-eslint-plugin
 
 除了本包，你需要同时安装 [ESlint](https://eslint.org/)
 
 ```shell
-$ npm install encode-fe-eslint-plugin eslint --save-dev
+$ npm install etc-fe-eslint-plugin eslint --save-dev
 ```
 
 ## 使用
@@ -24,9 +24,9 @@ $ npm install encode-fe-eslint-plugin eslint --save-dev
 ```js
 // .eslintrc.js
 module.exports = {
-  plugin: ['encode-fe-eslint-config'],
+  plugin: ['etc-fe-eslint-config'],
   rules: {
-    'encode-fe-eslint-plugin/no-secret-info': 'error',
+    'etc-fe-eslint-plugin/no-secret-info': 'error',
   },
 };
 ```
@@ -36,7 +36,7 @@ module.exports = {
 ```js
 // .eslintrc.js
 module.exports = {
-  extends: 'plugin:encode-fe-eslint-plugin/recommended',
+  extends: 'plugin:etc-fe-eslint-plugin/recommended',
 };
 ```
 

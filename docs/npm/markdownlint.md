@@ -1,5 +1,5 @@
 ---
-title: encode-fe-markdownlint-config
+title: etc-fe-markdownlint-config
 categories:
   - 工程规范
 tags:
@@ -9,7 +9,7 @@ author:
   link: https://github.com/AmbitionsXXXV/fe-lint
 ---
 
-# encode-fe-markdownlint-config
+# etc-fe-markdownlint-config
 
 :::tip
 etcetera 文档 规范
@@ -22,7 +22,7 @@ etcetera 文档 规范
 需要先行安装 [markdownlint](https://www.npmjs.com/package/markdownlint)：
 
 ```bash
-npm install encode-fe-markdownlint-config markdownlint --save-dev
+npm install etc-fe-markdownlint-config markdownlint --save-dev
 ```
 
 ## 使用
@@ -31,6 +31,6 @@ npm install encode-fe-markdownlint-config markdownlint --save-dev
 
 ```json
 {
-  "extends": "encode-fe-markdownlint-config"
+  "extends": "etc-fe-markdownlint-config"
 }
 ```

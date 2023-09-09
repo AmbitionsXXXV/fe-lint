@@ -64,7 +64,7 @@ export default (results: ScanResult[], fix: boolean): void => {
 
   // 扫描日志，预期:
   // ✖ x problems (y errors, z warnings)
-  // y error and z warnings potentially fixable with the `encode-fe-lint fix`
+  // y error and z warnings potentially fixable with the `etc-fe-lint fix`
   //
   // ✔ no problems
   if (!fix && total > 0) {

@@ -1,10 +1,10 @@
 {
-  "name": "encode-fe-markdownlint-config",
+  "name": "etc-fe-markdownlint-config",
   "version": "1.0.0",
   "main": "index.json",
   "description": "etcetera 文档规范",
   "keywords": [
-    "encode",
+    "etcetera",
     "markdown",
     "lint"
   ],

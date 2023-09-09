@@ -1,4 +1,4 @@
-# encode-fe-markdownlint-config
+# etc-fe-markdownlint-config
 
 > etcetera 文档 规范
 
@@ -9,7 +9,7 @@
 需要先行安装 [markdownlint](https://www.npmjs.com/package/markdownlint)：
 
 ```bash
-npm install encode-fe-markdownlint-config markdownlint --save-dev
+npm install etc-fe-markdownlint-config markdownlint --save-dev
 ```
 
 ## 使用
@@ -18,6 +18,6 @@ npm install encode-fe-markdownlint-config markdownlint --save-dev
 
 ```json
 {
-	"extends": "encode-fe-markdownlint-config"
+	"extends": "etc-fe-markdownlint-config"
 }
 ```
