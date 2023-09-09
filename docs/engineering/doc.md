@@ -6,7 +6,7 @@ tags:
   - 工程规范
 author:
   name: etcetera
-  link: https://github.com/encode-studio-fe/fe-spec
+  link: https://github.com/AmbitionsXXXV/fe-lint
 ---
 
 # 文档 规范

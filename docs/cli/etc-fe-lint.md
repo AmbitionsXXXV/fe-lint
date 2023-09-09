@@ -6,7 +6,7 @@ tags:
   - 脚手架规范
 author:
   name: etcetera
-  link: https://github.com/encode-studio-fe/fe-spec
+  link: https://github.com/AmbitionsXXXV/fe-lint
 ---
 
 # encode-fe-lint

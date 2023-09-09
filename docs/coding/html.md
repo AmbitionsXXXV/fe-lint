@@ -6,7 +6,7 @@ tags:
   - 编码规范
 author:
   name: etcetera
-  link: https://github.com/encode-studio-fe/fe-spec
+  link: https://github.com/AmbitionsXXXV/fe-lint
 ---
 
 # HTML 编码规范

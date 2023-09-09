@@ -86,13 +86,13 @@
     "vue-eslint-parser": "^7.3.0"
   },
   "author": "chenghuai",
-  "homepage": "https://github.com/encode-studio-fe/fe-spec#readme",
+  "homepage": "https://github.com/AmbitionsXXXV/fe-lint#readme",
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/encode-studio-fe/fe-spec.git"
+    "url": "git+https://github.com/AmbitionsXXXV/fe-lint.git"
   },
   "bugs": {
-    "url": "https://github.com/encode-studio-fe/fe-spec/issues"
+    "url": "https://github.com/AmbitionsXXXV/fe-lint/issues"
   }
 }
