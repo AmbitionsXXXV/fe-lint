@@ -169,18 +169,6 @@ importers:
       ejs:
         specifier: ^3.1.5
         version: 3.1.9
-      etc-fe-commitlint-config:
-        specifier: workspace:^
-        version: link:../commitlint-config
-      etc-fe-eslint-config:
-        specifier: workspace:^
-        version: link:../eslint-config
-      etc-fe-markdownlint-config:
-        specifier: workspace:^
-        version: link:../markdownlint-config
-      etc-fe-stylelint-config:
-        specifier: workspace:^
-        version: link:../stylelint-config
       eslint:
         specifier: ^8.7.0
         version: 8.7.0
@@ -211,6 +199,18 @@ importers:
       eslint-plugin-vue:
         specifier: ^7.3.0
         version: 7.3.0(eslint@8.7.0)
+      etc-fe-commitlint-config:
+        specifier: ^1.1.0
+        version: link:../commitlint-config
+      etc-fe-eslint-config:
+        specifier: ^1.1.0
+        version: link:../eslint-config
+      etc-fe-markdownlint-config:
+        specifier: ^1.1.0
+        version: link:../markdownlint-config
+      etc-fe-stylelint-config:
+        specifier: ^1.1.0
+        version: link:../stylelint-config
       execa:
         specifier: ^5.0.0
         version: 5.1.1
@@ -15221,6 +15221,7 @@ packages:
     dependencies:
       decode-uri-component: 0.2.2
       object-assign: 4.1.1
+      strict-uri-encode: 1.1.0
       strict-uri-etc: 1.1.0
     dev: true
 
@@ -16484,6 +16485,11 @@ packages:
 
   /stream-shift@1.0.1:
     resolution: {integrity: sha512-AiisoFqQ0vbGcZgQPY1cdP2I76glaVA/RauYR4G4thNFgkTqr90yXTo4LYX60Jl+sIlPNHHdGSwo01AvbKUSVQ==}
+    dev: true
+
+  /strict-uri-encode@1.1.0:
+    resolution: {integrity: sha512-R3f198pcvnB+5IpnBlRkphuE9n46WyVl8I39W/ZUTZLz4nqSP/oLYUrcnJrw462Ds8he4YKMov2efsTIw1BDGQ==}
+    engines: {node: '>=0.10.0'}
     dev: true
 
   /strict-uri-etc@1.1.0:

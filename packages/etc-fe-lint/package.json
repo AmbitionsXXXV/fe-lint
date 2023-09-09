@@ -62,10 +62,10 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-vue": "^7.3.0",
-    "etc-fe-commitlint-config": "workspace:^",
-    "etc-fe-eslint-config": "workspace:^",
-    "etc-fe-markdownlint-config": "workspace:^",
-    "etc-fe-stylelint-config": "workspace:^",
+    "etc-fe-commitlint-config": "^1.1.0",
+    "etc-fe-eslint-config": "^1.1.0",
+    "etc-fe-markdownlint-config": "^1.1.0",
+    "etc-fe-stylelint-config": "^1.1.0",
     "execa": "^5.0.0",
     "fast-glob": "^3.2.11",
     "fs-extra": "^9.0.1",
@@ -94,5 +94,6 @@
   },
   "bugs": {
     "url": "https://github.com/AmbitionsXXXV/fe-lint/issues"
-  }
+  },
+  "gitHead": "935f7f33066c606ca463c7c921f507e94783bbb0"
 }
