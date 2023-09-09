@@ -1,4 +1,4 @@
-# fe-spec
+# fe-lint
 
 etcetera 前端编码规范工程化
 
