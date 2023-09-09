@@ -15,7 +15,7 @@
     "test": "mocha ./__tests__/*.test.js --timeout 5000",
     "print-config": "eslint --print-config ./index.js > ./print-config.json"
   },
-  "author": "chenghuai",
+  "author": "etcetera",
   "homepage": "https://github.com/AmbitionsXXXV/fe-lint#readme",
   "license": "ISC",
   "repository": {

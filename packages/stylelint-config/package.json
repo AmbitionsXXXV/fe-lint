@@ -11,7 +11,7 @@
   "scripts": {
     "test": "jest"
   },
-  "author": "chenghuai",
+  "author": "etcetera",
   "homepage": "https://github.com/AmbitionsXXXV/fe-lint#readme",
   "license": "ISC",
   "peerDependencies": {
