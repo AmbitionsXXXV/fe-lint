@@ -33,16 +33,16 @@ export default defineConfig4CustomTheme({
       {
         text: 'NPM包',
         items: [
-          { text: 'encode-fe-eslint-config', link: '/npm/eslint.md' },
-          { text: 'encode-fe-stylelint-config', link: '/npm/stylelint.md' },
-          { text: 'encode-fe-commitlint-config', link: '/npm/commitlint.md' },
-          { text: 'encode-fe-markdownlint-config', link: '/npm/markdownlint.md' },
-          { text: 'encode-fe-eslint-plugin', link: '/npm/eslint-plugin.md' },
+          { text: 'etc-fe-eslint-config', link: '/npm/eslint.md' },
+          { text: 'etc-fe-stylelint-config', link: '/npm/stylelint.md' },
+          { text: 'etc-fe-commitlint-config', link: '/npm/commitlint.md' },
+          { text: 'etc-fe-markdownlint-config', link: '/npm/markdownlint.md' },
+          { text: 'etc-fe-eslint-plugin', link: '/npm/eslint-plugin.md' },
         ],
       },
       {
         text: '脚手架',
-        items: [{ text: 'encode-fe-lint', link: '/cli/encode-fe-lint.md' }],
+        items: [{ text: 'etc-fe-lint', link: '/cli/etc-fe-lint.md' }],
       },
     ],
     sidebar: [
@@ -91,38 +91,36 @@ export default defineConfig4CustomTheme({
       {
         title: 'NPM包',
         children: [
-          { title: 'encode-fe-eslint-config', path: '/npm/eslint.md' },
-          { title: 'encode-fe-stylelint-config', path: '/npm/stylelint.md' },
-          { title: 'encode-fe-commitlint-config', path: '/npm/commitlint.md' },
-          { title: 'encode-fe-markdownlint-config', path: '/npm/markdownlint.md' },
-          { title: 'encode-fe-eslint-plugin', path: '/npm/eslint-plugin.md' },
+          { title: 'etc-fe-eslint-config', path: '/npm/eslint.md' },
+          { title: 'etc-fe-stylelint-config', path: '/npm/stylelint.md' },
+          { title: 'etc-fe-commitlint-config', path: '/npm/commitlint.md' },
+          { title: 'etc-fe-markdownlint-config', path: '/npm/markdownlint.md' },
+          { title: 'etc-fe-eslint-plugin', path: '/npm/eslint-plugin.md' },
         ],
       },
       {
         title: '脚手架',
-        children: [{ title: 'encode-fe-lint', path: '/cli/encode-fe-lint.md' }],
+        children: [{ title: 'etc-fe-lint', path: '/cli/etc-fe-lint.md' }],
       },
     ],
-    logo: '/img/logo.png',
-    repo: 'encode-studio-fe/fe-spec',
+    repo: 'etc-studio-fe/fe-spec',
     searchMaxSuggestions: 10,
     docsDir: 'docs',
     footer: {
       createYear: 2023,
       copyrightInfo:
-        'encode studio | <a href="https://github.com/encode-studio-fe/fe-spec" target="_blank">github</a>',
+        'etc studio | <a href="https://github.com/AmbitionsXXXV/fe-lint" target="_blank">github</a>',
     },
 
     extendFrontmatter: {
       author: {
         name: 'etcetera',
-        link: 'https://github.com/encode-studio-fe/fe-sepc',
+        link: 'https://github.com/AmbitionsXXXV/fe-lint',
       },
     },
   },
 
   head: [
-    ['link', { rel: 'icon', href: '/img/logo.png' }],
     [
       'meta',
       {
