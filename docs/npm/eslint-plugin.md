@@ -22,7 +22,7 @@ $ npm install etc-fe-eslint-plugin eslint --save-dev
 ### 引入插件
 
 ```js
-// .eslintrc.js
+// .eslintrc.cjs
 module.exports = {
   plugin: ['etc-fe-eslint-config'],
   rules: {
@@ -34,7 +34,7 @@ module.exports = {
 ### 使用 presets
 
 ```js
-// .eslintrc.js
+// .eslintrc.cjs
 module.exports = {
   extends: 'plugin:etc-fe-eslint-plugin/recommended',
 };

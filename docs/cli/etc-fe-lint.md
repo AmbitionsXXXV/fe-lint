@@ -50,7 +50,7 @@ npm install etc-fe-lint -g
 
 - 安装各种依赖：包括 `Linter` 依赖，如 [ESLint](https://eslint.org/)、[stylelint](https://stylelint.io/)、[commitlint](https://commitlint.js.org/#/)、[markdownlint](https://github.com/DavidAnson/markdownlint) 等；配置依赖，如 [etc-fe-eslint-config](https://www.npmjs.com/package/etc-fe-eslint-config)、[etc-fe-stylelint-config](https://www.npmjs.com/package/etc-fe-stylelint-config)、[etc-fe-commitlint-config](https://www.npmjs.com/package/etc-fe-commitlint-config)、[etc-fe-markdownlint-config](https://www.npmjs.com/package/etc-fe-markdownlint-config) 等
 - 写入各种配置文件，包括：
-  - `.eslintrc.js`、`.eslintignore`：ESLint 配置（继承 `etc-fe-eslint-config`）及黑名单文件
+  - `.eslintrc.cjs`、`.eslintignore`：ESLint 配置（继承 `etc-fe-eslint-config`）及黑名单文件
   - `.stylelintrc.js`、`.stylelintignore`：stylelint 配置（继承 `etc-fe-stylelint-config`）及黑名单文件
   - `commitlint.config.js`：commitlint 配置（继承 `etc-fe-commitlint-config`）
   - `.markdownlint.json`、`.markdownlintignore`：`markdownlint` 配置及黑名单文件
@@ -183,7 +183,7 @@ module.exports = {
 
 ### TypeScript 项目扫描性能问题
 
-如果你的 TS 项目 commit 卡口和 `etc-fe-lint scan` 运行时间很长，可以通过如下在 `.eslintrc.js` 中增加以下配置提升性能：
+如果你的 TS 项目 commit 卡口和 `etc-fe-lint scan` 运行时间很长，可以通过如下在 `.eslintrc.cjs` 中增加以下配置提升性能：
 
 ```js
 module.exports = {
