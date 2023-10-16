@@ -2,18 +2,22 @@ import path from 'path';
 import glob from 'glob';
 import markdownLint from 'markdownlint';
 import markdownLintConfig from 'etc-fe-markdownlint-config';
-import type { ScanOptions, PKG, Config } from '../../types';
+import type { Config, PKG, ScanOptions } from '../../types';
 
 type LintOptions = markdownLint.Options & { fix?: boolean };
 
 /**
  * 获取 Markdownlint 配置
  */
-export function getMarkdownlintConfig(opts: ScanOptions, pkg: PKG, config: Config): LintOptions {
+export function getMarkdownlintConfig(
+  opts: ScanOptions,
+  pkg: PKG,
+  config: Config
+): LintOptions {
   const { cwd } = opts;
   const lintConfig: LintOptions = {
     fix: Boolean(opts.fix),
-    resultVersion: 3,
+    resultVersion: 3
   };
 
   if (config.markdownlintOptions) {
@@ -24,7 +28,9 @@ export function getMarkdownlintConfig(opts: ScanOptions, pkg: PKG, config: Confi
     if (lintConfigFiles.length === 0) {
       lintConfig.config = markdownLintConfig;
     } else {
-      lintConfig.config = markdownLint.readConfigSync(path.resolve(cwd, lintConfigFiles[0]));
+      lintConfig.config = markdownLint.readConfigSync(
+        path.resolve(cwd, lintConfigFiles[0])
+      );
     }
   }
 

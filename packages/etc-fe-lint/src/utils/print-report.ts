@@ -23,7 +23,9 @@ export default (results: ScanResult[], fix: boolean): void => {
     if (errored) summaryColor = 'red';
     let text = '';
     if (rule && url) {
-      text = terminalLink(chalk.blue(rule), chalk.dim(` ${url} `), { fallback: !isDocker() });
+      text = terminalLink(chalk.blue(rule), chalk.dim(` ${url} `), {
+        fallback: !isDocker()
+      });
     } else if (rule) {
       text = chalk.blue(rule);
     }
@@ -33,7 +35,7 @@ export default (results: ScanResult[], fix: boolean): void => {
       chalk.dim(`${line}:${column}`),
       errored ? chalk.red('error') : chalk.yellow('warning'),
       message,
-      text,
+      text
     ];
   };
 
@@ -49,7 +51,7 @@ export default (results: ScanResult[], fix: boolean): void => {
     output += `${chalk.underline(result.filePath)}\n`;
     output += `${table(messages.map(transformMessage), {
       align: ['.', 'r', 'l'],
-      stringLength: (str) => stripAnsi(str).length,
+      stringLength: (str) => stripAnsi(str).length
     })}\n\n`;
   }
 
@@ -57,7 +59,8 @@ export default (results: ScanResult[], fix: boolean): void => {
   const pluralize = (word, count) => (count === 1 ? word : `${word}s`);
 
   // 修复日志
-  if (fix) output += chalk.green('代码规范问题自动修复完成，请通过 git diff 确认修复效果 :D\n');
+  if (fix)
+    output += chalk.green('代码规范问题自动修复完成，请通过 git diff 确认修复效果 :D\n');
   if (fix && total > 0) {
     output += chalk.green('ps. 以上显示的是无法被自动修复的问题，需要手动进行修复\n');
   }
@@ -79,8 +82,8 @@ export default (results: ScanResult[], fix: boolean): void => {
         ', ',
         warningCount,
         pluralize(' warning', warningCount),
-        ')\n',
-      ].join(''),
+        ')\n'
+      ].join('')
     );
     if (fixableErrorCount > 0 || fixableWarningCount > 0) {
       output += chalk[summaryColor].bold(
@@ -91,8 +94,8 @@ export default (results: ScanResult[], fix: boolean): void => {
           ' and ',
           fixableWarningCount,
           pluralize(' warning', fixableWarningCount),
-          ` potentially fixable with the \`${PKG_NAME} fix\``,
-        ].join(''),
+          ` potentially fixable with the \`${PKG_NAME} fix\``
+        ].join('')
       );
     }
   }

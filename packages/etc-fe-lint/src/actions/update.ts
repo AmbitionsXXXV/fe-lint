@@ -9,7 +9,9 @@ import { PKG_NAME, PKG_VERSION } from '../utils/constants';
  */
 const checkLatestVersion = async (): Promise<string | null> => {
   const npm = await npmType;
-  const latestVersion = execSync(`${npm} view ${PKG_NAME} version`).toString('utf-8').trim();
+  const latestVersion = execSync(`${npm} view ${PKG_NAME} version`)
+    .toString('utf-8')
+    .trim();
 
   if (PKG_VERSION === latestVersion) return null;
 
@@ -49,7 +51,7 @@ export default async (install = true) => {
       update.stop();
     } else if (latestVersion) {
       log.warn(
-        `最新版本为 ${latestVersion}，本地版本为 ${PKG_VERSION}，请尽快升级到最新版本。\n你可以执行 ${npm} install -g ${PKG_NAME}@latest 来安装此版本\n`,
+        `最新版本为 ${latestVersion}，本地版本为 ${PKG_VERSION}，请尽快升级到最新版本。\n你可以执行 ${npm} install -g ${PKG_NAME}@latest 来安装此版本\n`
       );
     } else if (install) {
       log.info(`当前没有可用的更新`);

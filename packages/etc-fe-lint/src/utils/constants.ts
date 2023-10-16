@@ -3,12 +3,12 @@ import fs from 'fs-extra';
 
 // 读取 package.json
 const pkg: Record<string, any> = JSON.parse(
-  fs.readFileSync(path.join(__dirname, '../../package.json'), 'utf8'),
+  fs.readFileSync(path.join(__dirname, '../../package.json'), 'utf8')
 );
 
 export enum UNICODE {
   success = '\u2714', // ✔
-  failure = '\u2716', // ✖
+  failure = '\u2716' // ✖
 }
 
 /**
@@ -27,48 +27,48 @@ export const PKG_VERSION: string = pkg.version;
 export const PROJECT_TYPES: Array<{ name: string; value: string }> = [
   {
     name: '未使用 React、Vue、Node.js 的项目（JavaScript）',
-    value: 'index',
+    value: 'index'
   },
   {
     name: '未使用 React、Vue、Node.js 的项目（TypeScript）',
-    value: 'typescript',
+    value: 'typescript'
   },
   {
     name: 'React 项目（JavaScript）',
-    value: 'react',
+    value: 'react'
   },
   {
     name: 'React 项目（TypeScript）',
-    value: 'typescript/react',
+    value: 'typescript/react'
   },
   {
     name: 'Rax 项目（JavaScript）',
-    value: 'rax',
+    value: 'rax'
   },
   {
     name: 'Rax 项目（TypeScript）',
-    value: 'typescript/rax',
+    value: 'typescript/rax'
   },
   {
     name: 'Vue 项目（JavaScript）',
-    value: 'vue',
+    value: 'vue'
   },
   {
     name: 'Vue 项目（TypeScript）',
-    value: 'typescript/vue',
+    value: 'typescript/vue'
   },
   {
     name: 'Node.js 项目（JavaScript）',
-    value: 'node',
+    value: 'node'
   },
   {
     name: 'Node.js 项目（TypeScript）',
-    value: 'typescript/node',
+    value: 'typescript/node'
   },
   {
     name: '使用 ES5 及之前版本 JavaScript 的老项目',
-    value: 'es5',
-  },
+    value: 'es5'
+  }
 ];
 
 /**
@@ -89,7 +89,7 @@ export const ESLINT_IGNORE_PATTERN: string[] = [
   'lib/',
   '**/*.min.js',
   '**/*-min.js',
-  '**/*.bundle.js',
+  '**/*.bundle.js'
 ];
 
 /**
@@ -109,7 +109,7 @@ export const STYLELINT_IGNORE_PATTERN: string[] = [
   'lib/',
   '**/*.min.css',
   '**/*-min.css',
-  '**/*.bundle.css',
+  '**/*.bundle.css'
 ];
 
 /**
@@ -126,7 +126,7 @@ export const MARKDOWN_LINT_IGNORE_PATTERN: string[] = [
   'dist/',
   'coverage/',
   'es/',
-  'lib/',
+  'lib/'
 ];
 
 /**
@@ -135,7 +135,7 @@ export const MARKDOWN_LINT_IGNORE_PATTERN: string[] = [
 export const PRETTIER_FILE_EXT = [
   ...STYLELINT_FILE_EXT,
   ...ESLINT_FILE_EXT,
-  ...MARKDOWN_LINT_FILE_EXT,
+  ...MARKDOWN_LINT_FILE_EXT
 ];
 
 /**
@@ -147,5 +147,5 @@ export const PRETTIER_IGNORE_PATTERN: string[] = [
   'dist/**/*',
   'lib/**/*',
   'es/**/*',
-  'coverage/**/*',
+  'coverage/**/*'
 ];

@@ -5,9 +5,9 @@ import glob from 'glob';
 import ejs from 'ejs';
 import {
   ESLINT_IGNORE_PATTERN,
-  STYLELINT_FILE_EXT,
-  STYLELINT_IGNORE_PATTERN,
   MARKDOWN_LINT_IGNORE_PATTERN,
+  STYLELINT_FILE_EXT,
+  STYLELINT_IGNORE_PATTERN
 } from './constants';
 
 /**
@@ -29,7 +29,7 @@ const mergeVSCodeConfig = (filepath: string, content: string) => {
         }
       }),
       null,
-      2,
+      2
     );
   } catch (e) {
     return '';
@@ -44,7 +44,9 @@ const mergeVSCodeConfig = (filepath: string, content: string) => {
  */
 export default (cwd: string, data: Record<string, any>, vscode?: boolean) => {
   const templatePath = path.resolve(__dirname, '../config');
-  const templates = glob.sync(`${vscode ? '_vscode' : '**'}/*.ejs`, { cwd: templatePath });
+  const templates = glob.sync(`${vscode ? '_vscode' : '**'}/*.ejs`, {
+    cwd: templatePath
+  });
   for (const name of templates) {
     const filepath = path.resolve(cwd, name.replace(/\.ejs$/, '').replace(/^_/, '.'));
     let content = ejs.render(fs.readFileSync(path.resolve(templatePath, name), 'utf8'), {
@@ -52,7 +54,7 @@ export default (cwd: string, data: Record<string, any>, vscode?: boolean) => {
       stylelintExt: STYLELINT_FILE_EXT,
       stylelintIgnores: STYLELINT_IGNORE_PATTERN,
       markdownLintIgnores: MARKDOWN_LINT_IGNORE_PATTERN,
-      ...data,
+      ...data
     });
 
     // 合并 vscode config

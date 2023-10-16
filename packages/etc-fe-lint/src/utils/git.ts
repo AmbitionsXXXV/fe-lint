@@ -13,13 +13,13 @@ export const getCommitFiles = async (options: execa.Options = {}): Promise<strin
         '--staged', // 比较 暂缓区 与 last commit 的差别
         '--diff-filter=ACMR', // 只显示 added、copied、modified、renamed
         '--name-only', // 只显示更改文件的名称
-        '--ignore-submodules',
+        '--ignore-submodules'
       ],
       {
         ...options,
         all: true,
-        cwd: options.cwd || process.cwd(),
-      },
+        cwd: options.cwd || process.cwd()
+      }
     );
 
     return stdout ? stdout.split(/\s/).filter(Boolean) : [];
@@ -38,13 +38,13 @@ export const getAmendFiles = async (options: execa.Options = {}): Promise<string
       'git',
       [
         'diff', // 比较 工作区 与 暂缓区的差别
-        '--name-only',
+        '--name-only'
       ],
       {
         ...options,
         all: true,
-        cwd: options.cwd || process.cwd(),
-      },
+        cwd: options.cwd || process.cwd()
+      }
     );
 
     return stdout;

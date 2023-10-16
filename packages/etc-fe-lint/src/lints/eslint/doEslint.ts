@@ -18,11 +18,11 @@ export async function doESLint(options: DoESLintOptions) {
   } else {
     const pattern = join(
       options.include,
-      `**/*.{${ESLINT_FILE_EXT.map((t) => t.replace(/^\./, '')).join(',')}}`,
+      `**/*.{${ESLINT_FILE_EXT.map((t) => t.replace(/^\./, '')).join(',')}}`
     );
     files = await fg(pattern, {
       cwd: options.cwd,
-      ignore: ESLINT_IGNORE_PATTERN,
+      ignore: ESLINT_IGNORE_PATTERN
     });
   }
   const eslint = new ESLint(getESLintConfig(options, options.pkg, options.config));

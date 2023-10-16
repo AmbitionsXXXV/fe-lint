@@ -12,7 +12,7 @@ import update from './actions/update';
 import log from './utils/log';
 import printReport from './utils/print-report';
 import npmType from './utils/npm-type';
-import { getCommitFiles, getAmendFiles } from './utils/git';
+import { getAmendFiles, getCommitFiles } from './utils/git';
 import generateTemplate from './utils/generate-template';
 import { PKG_NAME, PKG_VERSION } from './utils/constants';
 
@@ -25,13 +25,15 @@ const installDepsIfThereNo = async () => {
   const lintConfigFiles = [].concat(
     glob.sync('.eslintrc?(.@(js|yaml|yml|json))', { cwd }),
     glob.sync('.stylelintrc?(.@(js|yaml|yml|json))', { cwd }),
-    glob.sync('.markdownlint(.@(yaml|yml|json))', { cwd }),
+    glob.sync('.markdownlint(.@(yaml|yml|json))', { cwd })
   );
   const nodeModulesPath = path.resolve(cwd, 'node_modules');
 
   if (!fs.existsSync(nodeModulesPath) && lintConfigFiles.length > 0) {
     const npm = await npmType;
-    log.info(`使用项目 Lint 配置，检测到项目未安装依赖，将进行安装（执行 ${npm} install）`);
+    log.info(
+      `使用项目 Lint 配置，检测到项目未安装依赖，将进行安装（执行 ${npm} install）`
+    );
     execSync(`cd ${cwd} && ${npm} i`);
   }
 };
@@ -39,7 +41,7 @@ const installDepsIfThereNo = async () => {
 program
   .version(PKG_VERSION)
   .description(
-    `${PKG_NAME} 是 etcetera 的配套 Lint 工具，提供简单的 CLI 和 Node.js API，让项目能够一键接入、一键扫描、一键修复、一键升级，并为项目配置 git commit 卡点，降低项目实施规范的成本`,
+    `${PKG_NAME} 是 etcetera 的配套 Lint 工具，提供简单的 CLI 和 Node.js API，让项目能够一键接入、一键扫描、一键修复、一键升级，并为项目配置 git commit 卡点，降低项目实施规范的成本`
   );
 
 program
@@ -53,7 +55,7 @@ program
     } else {
       await init({
         cwd,
-        checkVersionUpdate: true,
+        checkVersionUpdate: true
       });
     }
   });
@@ -77,7 +79,7 @@ program
       include: cmd.include || cwd,
       quiet: Boolean(cmd.quiet),
       outputReport: Boolean(cmd.outputReport),
-      ignore: cmd.ignore, // 对应 --no-ignore
+      ignore: cmd.ignore // 对应 --no-ignore
     });
     let type = 'succeed';
     if (runErrors.length > 0 || errorCount > 0) {
@@ -97,7 +99,9 @@ program
   .command('commit-msg-scan')
   .description('commit message 检查: git commit 时对 commit message 进行检查')
   .action(() => {
-    const result = spawn.sync('commitlint', ['-E', 'HUSKY_GIT_PARAMS'], { stdio: 'inherit' });
+    const result = spawn.sync('commitlint', ['-E', 'HUSKY_GIT_PARAMS'], {
+      stdio: 'inherit'
+    });
 
     if (result.status !== 0) {
       process.exit(result.status);
@@ -107,7 +111,10 @@ program
 program
   .command('commit-file-scan')
   .description('代码提交检查: git commit 时对提交代码进行规范问题扫描')
-  .option('-s, --strict', '严格模式，对 warn 和 error 问题都卡口，默认仅对 error 问题卡口')
+  .option(
+    '-s, --strict',
+    '严格模式，对 warn 和 error 问题都卡口，默认仅对 error 问题卡口'
+  )
   .action(async (cmd) => {
     await installDepsIfThereNo();
 
@@ -122,7 +129,7 @@ program
       cwd,
       include: cwd,
       quiet: !cmd.strict,
-      files: await getCommitFiles(),
+      files: await getCommitFiles()
     });
 
     if (errorCount > 0 || (cmd.strict && warningCount > 0)) {
@@ -149,7 +156,7 @@ program
       cwd,
       fix: true,
       include: cmd.include || cwd,
-      ignore: cmd.ignore, // 对应 --no-ignore
+      ignore: cmd.ignore // 对应 --no-ignore
     });
 
     checking.succeed();

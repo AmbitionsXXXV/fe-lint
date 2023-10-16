@@ -4,7 +4,11 @@ import type { ScanResult } from '../../types';
 /**
  * 格式化 ESLint 输出结果
  */
-export function formatESLintResults(results: ESLint.LintResult[], quiet: boolean, eslint: ESLint): ScanResult[] {
+export function formatESLintResults(
+  results: ESLint.LintResult[],
+  quiet: boolean,
+  eslint: ESLint
+): ScanResult[] {
   const rulesMeta = eslint.getRulesMetaForResults(results);
 
   return results
@@ -16,7 +20,7 @@ export function formatESLintResults(results: ESLint.LintResult[], quiet: boolean
         errorCount,
         warningCount,
         fixableErrorCount,
-        fixableWarningCount,
+        fixableWarningCount
       }) => ({
         filePath,
         errorCount,
@@ -31,11 +35,11 @@ export function formatESLintResults(results: ESLint.LintResult[], quiet: boolean
               rule: ruleId,
               url: rulesMeta[ruleId]?.docs?.url || '',
               message: message.replace(/([^ ])\.$/u, '$1'),
-              errored: fatal || severity === 2,
+              errored: fatal || severity === 2
             };
           }) // dont check ruleId, which can be null
           // https://eslint.org/docs/developer-guide/nodejs-api.html#-lintmessage-type
-          .filter(({ errored }) => (quiet ? errored : true)),
-      }),
+          .filter(({ errored }) => (quiet ? errored : true))
+      })
     );
 }

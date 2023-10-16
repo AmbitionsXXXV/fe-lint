@@ -7,7 +7,7 @@ import npmType from '../utils/npm-type';
 import log from '../utils/log';
 import conflictResolve from '../utils/conflict-resolve';
 import generateTemplate from '../utils/generate-template';
-import { PROJECT_TYPES, PKG_NAME } from '../utils/constants';
+import { PKG_NAME, PROJECT_TYPES } from '../utils/constants';
 import type { InitOptions, PKG } from '../types';
 
 let step = 0;
@@ -20,7 +20,7 @@ const chooseEslintType = async (): Promise<string> => {
     type: 'list',
     name: 'type',
     message: `Step ${++step}. 请选择项目的语言（JS/TS）和框架（React/Vue）类型：`,
-    choices: PROJECT_TYPES,
+    choices: PROJECT_TYPES
   });
 
   return type;
@@ -35,7 +35,7 @@ const chooseEnableStylelint = async (defaultValue: boolean): Promise<boolean> =>
     type: 'confirm',
     name: 'enable',
     message: `Step ${++step}. 是否需要使用 stylelint（若没有样式文件则不需要）：`,
-    default: defaultValue,
+    default: defaultValue
   });
 
   return enable;
@@ -49,7 +49,7 @@ const chooseEnableMarkdownLint = async (): Promise<boolean> => {
     type: 'confirm',
     name: 'enable',
     message: `Step ${++step}. 是否需要使用 markdownlint（若没有 Markdown 文件则不需要）：`,
-    default: true,
+    default: true
   });
 
   return enable;
@@ -63,7 +63,7 @@ const chooseEnablePrettier = async (): Promise<boolean> => {
     type: 'confirm',
     name: 'enable',
     message: `Step ${++step}. 是否需要使用 Prettier 格式化代码：`,
-    default: true,
+    default: true
   });
 
   return enable;
@@ -91,7 +91,10 @@ export default async (options: InitOptions) => {
   }
 
   // 初始化 `eslintType`
-  if (options.eslintType && PROJECT_TYPES.find((choice) => choice.value === options.eslintType)) {
+  if (
+    options.eslintType &&
+    PROJECT_TYPES.find((choice) => choice.value === options.eslintType)
+  ) {
     config.eslintType = options.eslintType;
   } else {
     config.eslintType = await chooseEslintType();

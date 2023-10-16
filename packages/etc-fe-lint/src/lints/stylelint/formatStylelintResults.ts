@@ -5,7 +5,10 @@ import { getStylelintRuleDocUrl } from './getStylelintDocUrl';
 /**
  * 格式化 Stylelint 输出结果
  */
-export function formatStylelintResults(results: LintResult[], quiet: boolean): ScanResult[] {
+export function formatStylelintResults(
+  results: LintResult[],
+  quiet: boolean
+): ScanResult[] {
   return results.map(({ source, warnings }) => {
     let errorCount = 0;
     let warningCount = 0;
@@ -23,8 +26,10 @@ export function formatStylelintResults(results: LintResult[], quiet: boolean): S
           column,
           rule,
           url: getStylelintRuleDocUrl(rule),
-          message: text.replace(/([^ ])\.$/u, '$1').replace(new RegExp(`\\(${rule}\\)`), ''),
-          errored: severity === 'error',
+          message: text
+            .replace(/([^ ])\.$/u, '$1')
+            .replace(new RegExp(`\\(${rule}\\)`), ''),
+          errored: severity === 'error'
         };
       });
 
@@ -34,7 +39,7 @@ export function formatStylelintResults(results: LintResult[], quiet: boolean): S
       errorCount,
       warningCount,
       fixableErrorCount: 0,
-      fixableWarningCount: 0,
+      fixableWarningCount: 0
     };
   });
 }

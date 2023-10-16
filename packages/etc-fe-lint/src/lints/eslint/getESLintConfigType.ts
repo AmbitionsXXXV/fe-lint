@@ -27,7 +27,7 @@ export function getESLintConfigType(cwd: string, pkg: PKG): string {
     dsl = 'rax';
   }
 
-  return (
-    'etc-fe-eslint-config/' + `${language}/${dsl}`.replace(/\/$/, '/index').replace(/^\//, '')
-  );
+  return `etc-fe-eslint-config/${`${language}/${dsl}`
+    .replace(/\/$/, '/index')
+    .replace(/^\//, '')}`;
 }

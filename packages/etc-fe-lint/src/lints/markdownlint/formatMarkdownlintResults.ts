@@ -6,7 +6,7 @@ import type { ScanResult } from '../../types';
  */
 export function formatMarkdownlintResults(
   results: markdownlint.LintResults,
-  quiet: boolean,
+  quiet: boolean
 ): ScanResult[] {
   const parsedResults = [];
 
@@ -16,7 +16,14 @@ export function formatMarkdownlintResults(
     let warningCount = 0;
     let fixableWarningCount = 0;
     const messages = results[file].map(
-      ({ lineNumber, ruleNames, ruleDescription, ruleInformation, errorRange, fixInfo }) => {
+      ({
+        lineNumber,
+        ruleNames,
+        ruleDescription,
+        ruleInformation,
+        errorRange,
+        fixInfo
+      }) => {
         if (fixInfo) fixableWarningCount++;
         warningCount++;
 
@@ -26,9 +33,9 @@ export function formatMarkdownlintResults(
           rule: ruleNames[0],
           url: ruleInformation,
           message: ruleDescription,
-          errored: false,
+          errored: false
         };
-      },
+      }
     );
 
     parsedResults.push({
@@ -37,7 +44,7 @@ export function formatMarkdownlintResults(
       errorCount: 0,
       warningCount,
       fixableErrorCount: 0,
-      fixableWarningCount,
+      fixableWarningCount
     });
   }
 

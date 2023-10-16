@@ -61,6 +61,6 @@ export default async (options: ScanOptions): Promise<ScanReport> => {
     results,
     errorCount: results.reduce((count, { errorCount }) => count + errorCount, 0),
     warningCount: results.reduce((count, { warningCount }) => count + warningCount, 0),
-    runErrors,
+    runErrors
   };
 };
