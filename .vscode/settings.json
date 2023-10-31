@@ -1,7 +1,10 @@
 {
   "cSpell.words": [
+    "conventionalcommits",
     "copyfiles",
     "execa",
-    "stylelint"
+    "preinstall",
+    "stylelint",
+    "vuepress"
   ]
 }
