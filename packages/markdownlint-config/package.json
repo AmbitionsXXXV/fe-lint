@@ -19,7 +19,7 @@
     "url": "https://github.com/AmbitionsXXXV/fe-lint/issues"
   },
   "peerDependencies": {
-    "markdownlint": "^0.28.1"
+    "markdownlint": "^0.32.0"
   },
   "gitHead": "935f7f33066c606ca463c7c921f507e94783bbb0"
 }

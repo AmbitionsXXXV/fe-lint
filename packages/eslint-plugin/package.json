@@ -32,8 +32,8 @@
     "require-all": "^3.0.0"
   },
   "devDependencies": {
-    "eslint": "^8.50.0",
-    "jest": "^26.6.3"
+    "eslint": "^8.53.0",
+    "jest": "^29.7.0"
   },
   "gitHead": "935f7f33066c606ca463c7c921f507e94783bbb0"
 }
