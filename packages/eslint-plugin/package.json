@@ -1,6 +1,6 @@
 {
   "name": "etc-fe-eslint-plugin",
-  "version": "1.1.9",
+  "version": "1.1.10",
   "description": "etcetera custom eslint plugin",
   "scripts": {
     "test": "jest",
