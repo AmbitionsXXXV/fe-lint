@@ -1,6 +1,6 @@
 {
   "name": "etc-fe-markdownlint-config",
-  "version": "1.1.1",
+  "version": "1.1.8",
   "main": "index.json",
   "description": "etcetera 文档规范",
   "keywords": [
