@@ -12,7 +12,7 @@ export async function doPrettier(options: DoPrettierOptions) {
 
   if (options.files) {
     files = options.files.filter((name) => PRETTIER_FILE_EXT.includes(extname(name)));
-  } else {
+  } else { 
     const pattern = join(
       options.include,
       `**/*.{${PRETTIER_FILE_EXT.map((t) => t.replace(/^\./, '')).join(',')}}`
@@ -29,7 +29,7 @@ export async function doPrettier(options: DoPrettierOptions) {
 async function formatFile(filepath: string) {
   const text = await readFile(filepath, 'utf8');
   const options = await prettier.resolveConfig(filepath);
-  const formatted = prettier.format(text, { ...options, filepath });
+  const formatted = await prettier.format(text, { ...options, filepath });
 
   await writeFile(filepath, formatted, 'utf8');
 }

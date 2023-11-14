@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "outDir": "./lib",
-    "target": "ES5",
-    "module": "commonjs",
+    "target": "ES2015",
+    "module": "ESNext",
     "esModuleInterop": true,
     "removeComments": true,
     "resolveJsonModule": true,

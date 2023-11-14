@@ -1,7 +1,7 @@
-import path from 'path';
+import markdownLintConfig from 'etc-fe-markdownlint-config';
 import glob from 'glob';
 import markdownLint from 'markdownlint';
-import markdownLintConfig from 'etc-fe-markdownlint-config';
+import path from 'path';
 import type { Config, PKG, ScanOptions } from '../../types';
 
 type LintOptions = markdownLint.Options & { fix?: boolean };
