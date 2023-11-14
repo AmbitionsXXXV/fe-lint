@@ -1,6 +1,6 @@
 {
   "name": "etc-fe-eslint-config",
-  "version": "1.1.12",
+  "version": "1.1.13",
   "main": "index.js",
   "description": "etcetera JavaScript TypeScript Node 规范",
   "keywords": [
