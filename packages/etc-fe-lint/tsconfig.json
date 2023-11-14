@@ -5,6 +5,7 @@
     "module": "ESNext",
     "esModuleInterop": true,
     "removeComments": true,
+    "moduleResolution": "Node",
     "resolveJsonModule": true,
     "declaration": true,
     "downlevelIteration": true,
