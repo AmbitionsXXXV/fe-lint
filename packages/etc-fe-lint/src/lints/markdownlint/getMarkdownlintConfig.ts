@@ -1,6 +1,6 @@
 import markdownLintConfig from 'etc-fe-markdownlint-config';
 import glob from 'glob';
-import markdownLint from 'markdownlint';
+import markdownLint, { Configuration } from 'markdownlint';
 import path from 'path';
 import type { Config, PKG, ScanOptions } from '../../types';
 
@@ -26,7 +26,7 @@ export function getMarkdownlintConfig(
   } else {
     const lintConfigFiles = glob.sync('.markdownlint(.@(yaml|yml|json))', { cwd });
     if (lintConfigFiles.length === 0) {
-      lintConfig.config = markdownLintConfig;
+      lintConfig.config = markdownLintConfig as Configuration;
     } else {
       lintConfig.config = markdownLint.readConfigSync(
         path.resolve(cwd, lintConfigFiles[0])
