@@ -1,6 +1,6 @@
 {
   "name": "etc-fe-commitlint-config",
-  "version": "1.1.8",
+  "version": "1.1.9",
   "main": "index.js",
   "description": "etcetera Git规范",
   "keywords": [
