@@ -8,8 +8,8 @@
     "dev": "npm run copyfiles && tsc -w",
     "build": "rm -rf lib && npm run copyfiles && tsc",
     "copyfiles": "copyfiles -a -u 1 \"src/config/**\" lib",
-    "test": "npm run build && jest",
-    "coverage": "nyc jest --silent --forceExit",
+    "test": "npm run build",
+    "coverage": "nyc jest --silent --forceExit --passWithNoTests",
     "prepublishOnly": "npm run test"
   },
   "files": [
@@ -98,5 +98,5 @@
   "bugs": {
     "url": "https://github.com/AmbitionsXXXV/fe-lint/issues"
   },
-  "gitHead": "8bbf547df01765521bc7c8044f64d46dc06302dc"
+  "gitHead": "1ab9b3144cd5e7c548e35ab1a26664f9b8296be1"
 }
